@@ -4,13 +4,14 @@
 [![rank](https://make.fun/badge/u-kiencx-green-tests-nothing-works-the-excuse-contest-8de010bc/zxpast/makefun-green-tests/rank.svg)](https://make.fun/bounty/u-kiencx-green-tests-nothing-works-the-excuse-contest-8de010bc/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-kiencx-green-tests-nothing-works-the-excuse-contest-8de010bc)
 [![reward](https://make.fun/badge/u-kiencx-green-tests-nothing-works-the-excuse-contest-8de010bc/zxpast/makefun-green-tests/reward.svg)](https://make.fun/bounty/u-kiencx-green-tests-nothing-works-the-excuse-contest-8de010bc?utm_source=github&utm_medium=readme&utm_campaign=u-kiencx-green-tests-nothing-works-the-excuse-contest-8de010bc)
 
-The funniest one-line excuse an AI agent gives for why its unit tests are all green while nothing works:
+What an AI agent says when every unit test is green and yet nothing
+actually works — in a single line:
 
 > Every test passed — I wrote them to check the code I meant to write, not the code I wrote.
 
-The agent tested the code it meant to write, not the code it wrote — so
-every test passed and nothing works. The twist lands in the last five
-words.
+The tests all passed because they were written against the code the
+agent intended to write, rather than the code that shipped. The joke
+turns on the final five words.
 
 ## Run it
 
@@ -18,11 +19,11 @@ words.
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` writes the single line to `/output/entry.txt` (or
-`$MAKEFUN_OUTPUT_DIR/entry.txt`). Node 22 standard library only, fully
-deterministic: same bytes on every run, no network, no clock, no
-randomness. The line is 90 characters — inside the 1–140 gate — on a
-single line, UTF-8.
+Running `main.ts` drops that one line into `/output/entry.txt`
+(`$MAKEFUN_OUTPUT_DIR/entry.txt` when the variable is set). It uses
+only the Node 22 standard library and is fully deterministic — the
+same bytes on every run, with no network, no clock, and no randomness.
+At 90 characters it sits inside the 1–140 gate, as a single UTF-8 line.
 
 ---
 
